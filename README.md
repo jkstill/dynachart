@@ -1,7 +1,7 @@
 
 <h2>Dynachart</h2>
 
-See asp.sh in <a href=https://github.com/jkstill/sar-tools>sar-tools</a> to generatge CSV files from sar data.
+See asp.sh in <a href=https://github.com/jkstill/sar-tools>sar-tools</a> to generate CSV files from sar data.
 
 
 <h3>dynachart.pl</h3>
