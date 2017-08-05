@@ -253,13 +253,17 @@ foreach my $workSheet ( keys %workSheets ) {
 
 # write the directory page
 my $urlFormat = $workBook->add_format( color => 'blue', underline => 1 );
+my %sheetNames=();
+
 foreach my $worksheet ( $workBook->sheets() ) {
-	#$directory->write_row($directoryLineCount++,0,[$worksheet->get_name()],$boldFormat);
 	my $sheetName = $worksheet->get_name();
 	next if $sheetName eq $directoryName;
-	$directory->write_url($directoryLineCount++,0, qq{internal:'$sheetName'!A1} ,$urlFormat, $sheetName);
+	$sheetNames{$sheetName} = $worksheet;
 }
 
+foreach my $sheetName ( sort keys %sheetNames ) {
+	$directory->write_url($directoryLineCount++,0, qq{internal:'$sheetName'!A1} ,$urlFormat, $sheetName);
+}
 
 __END__
 
