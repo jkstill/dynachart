@@ -69,7 +69,19 @@ $wrapFormat->set_align('vjustify');
 
 my $labels=<>;
 chomp $labels;
+# sadf starts header lines with '# ' - remove that
+$labels =~ s/^#\s+//;
 my @labels = split(/,\s*/,$labels);
+
+if ($debug) {
+
+print qq{LABELS:\n};
+
+print join("\n",@labels);
+
+print "\n";
+
+}
 
 # get the X series category
 if ( $categoryColName ) {
