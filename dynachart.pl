@@ -156,6 +156,10 @@ while (<>) {
 	my $currWorkSheetName;
 	if ($workSheetCol) {
 		$currWorkSheetName=$data[$workSheetColPos];
+		if (length($currWorkSheetName) > 31 ) {
+			# cut some out of the middle of the name as the Excel worksheet name has max size of 31
+			$currWorkSheetName = substr($currWorkSheetName,0,14) . '...' . substr($currWorkSheetName,-14);
+		}
 	} else {
 		$currWorkSheetName='DynaChart';
 	}

@@ -75,6 +75,11 @@ See asp.sh in <a href=https://github.com/jkstill/sar-tools>sar-tools</a> to gene
 <h3>DESCRIPTION</h3>
     dynachart.pl creates an excel file with charts for selected columns>
 
+    Note: Device names greater than 31 characters will be shortened to 31 characters
+    This is to comply with the Microsoft Excel Worksheet naming standard.
+
+	 Example: scsi-360000970000192605774533030464644 will be shortened to scsi-360000970...74533030464644
+
 <h3>EXAMPLES</h3>
 <pre>
      dynachart.pl accepts data from STDIN
