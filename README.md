@@ -91,3 +91,44 @@ See asp.sh in <a href=https://github.com/jkstill/sar-tools>sar-tools</a> to gene
 </h3>
 
 
+<h3>sar-chart.sh</h3>
+
+Use sar-chart.sh to generate Microsoft Excel spreadsheets from sar data using dynachart.pl.
+
+The CSV files are assumed to be in the current directory
+
+sar-chart.sh destination-directory
+
+<pre>
+
+example:  
+
+ $ ./sar-chart.sh ../sar-xlsx
+ working on sar-disk-default.xlsx
+ working on sar-disk-combined.xlsx
+ working on sar-network-device.xlsx
+ working on sar-network-error-device.xlsx
+ working on sar-network-nfs.xlsx
+ working on sar-network-nfsd.xlsx
+ working on sar-network-socket.xlsx
+ working on sar-context.xlsx
+ working on sar-cpu.xlsx
+ working on sar-io-default.xlsx
+ working on sar-io-tps-combined.xlsx
+ working on sar-io-blks-per-second-combined.xlsx
+ working on sar-load-runq-threads.xlsx
+ working on sar-load-runq.xlsx
+ working on sar-memory.xlsx
+ working on sar-paging-rate.xlsx
+ working on sar-swap-rate.xlsx
+
+</pre>
+
+<h3>remap.sh</h3>
+
+ In this case the names for the disks as seen in sar-disk.csv file were changed to the values as seen in Oracle ASM.
+
+ See the comments in the script for the SQL query used.
+
+
+
