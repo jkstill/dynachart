@@ -1,6 +1,11 @@
 
 <h2>Dynachart</h2>
 
+This repo is deprecated
+
+See <a href="https://github.com/jkstill/csv-tools">csv-tools</a>
+
+
 See asp.sh in <a href=https://github.com/jkstill/sar-tools>sar-tools</a> to generate CSV files from sar data.
 
 
